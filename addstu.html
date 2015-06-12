@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta content="width=device-width",initial-scale=1">
+		<title>Girls Hostel System</title>
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="fontawesome/assets/css/font-awesome.min.css>
+		<script type="text/javascript" src="js/jquery-2.1.0.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<style>
+		body{
+			background-color:#CCFFFF;
+		}
+		.container{
+			margin:20px;
+			padding:15px;
+			font-family:serif;
+			font-size:12px;
+		}
+		.flborder {
+    border: 2px solid #990099!important;
+    padding: 0 1.4px 1.4px 1.4px !important;
+    margin: 0 0 1.5em 0 !important;
+   border-radius:4px;
+		
+}
+
+.leborder {
+    width:inherit; 
+    padding:0 10px; 
+    border-bottom:none;
+}
+		</style>
+	
+	</head>
+	
+	<body >
+			<nav role="navigation" class="navbar navbar-default">
+				<div class="navbar-header">
+					<button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+						<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					</button>
+				<a href="home.html" class ="navbar-brand">Home</a>			
+				</div>
+				
+				<div id=navbarCollapse class="collapse navbar-collapse">
+					<ul class ="nav navbar-nav">
+					<li class="active"><a href="http://jmi.ac.in/upload/hostel/hgr_manual_2014.pdf">About Us</a></li>
+					<li><a href="http://jmi.ac.in/studyatjamia/hostel/latest/2" target="blank">Notifications</a></li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right"><li ><a href="contact.html" ><i class="glyphicon glyphicon-phone-alt"></i>Contact Us</a></li></ul>
+				</div>
+			</nav>
+
+			<p align="center"><u>Fill in the information to add a new entry into the Hall of Residence</u></p>
+			
+				<div class= "container">
+			
+					<form class="form-horizontal" role="form" action="addstu.php" method="POST">
+					<fieldset class="flborder">
+   					 <legend class="leborder">College Information</legend>	
+        					<div class="form-group">
+        						<label class="control-label col-sm-4" for="studentID">Student ID:</label>
+       					   		<div class="col-sm-4">
+            						<input type="text" name="stuid" class="form-control" id="studentID" placeholder="Enter Student's JMI ID" autofocus required>
+         						</div>
+        					</div>
+
+       						 <div class="form-group">
+       							   <label class="control-label col-sm-4" for="studentID">Student Name:</label>
+       							   <div class="col-sm-4">          
+							   <input type="text" name="stuna" class="form-control" id="StudentID" placeholder="Student's Name" autofocus required>
+       							   </div>
+       							 </div>
+								<div class="form-group">
+       								<label class="col-sm-4 control-label" for="studentID">Course:</label>
+        							<div class="col-sm-4">
+        							<select class="form-control" name="stucourse" required>
+        											<option></option>
+<optgroup label="Doctoral Programmes">
+					<option>   	Ph.D. (Applied Science & Humanities)</option>
+					<option>	Ph.D. (Early Childhood Development)</option>
+					<option>	Ph.D.(Arabic)</option>
+					<option>	Ph.D.(Architecture)</option>
+					<option>	Ph.D.(Biosciences)</option>
+					<option>	Ph.D.(Biotechnology)</option>
+					<option>	Ph.D.(Chemistry)</option>
+					<option>	Ph.D.(Civil Engineering)</option>
+					<option>	Ph.D.(Commerce & Business Studies)</option>
+					<option>	Ph.D.(Comparative Religions)</option>
+					<option>	Ph.D.(Computer Engineering)</option>
+					<option>	Ph.D.(Computer Science)</option>
+					<option>	Ph.D.(Culture Media & Governance)</option>
+					<option>	Ph.D.(Dalit & Minorities Studies)</option>
+					<option>	Ph.D.(Development Studies, CJNS)</option>
+					<option>	Ph.D.(Economics)</option>
+					<option>	Ph.D.(Educational Studies)</option>
+					<option>	Ph.D.(Electrical Engineering)</option>
+					<option>	Ph.D.(Electronics & Communication)</option>
+					<option>	Ph.D.(English)</option>
+					<option>	Ph.D.(Extension Education)</option>
+					<option>	Ph.D.(Geography)</option>
+					<option>	Ph.D.(Gulf Studies)</option>
+					<option>	Ph.D.(Hindi)</option>
+					<option>	Ph.D.(History)</option>
+					<option>	Ph.D.(IASE)</option>
+					<option>	Ph.D.(Information Technology)</option>
+					<option>	Ph.D.(Interdisciplinary Research in Basic Sc.)</option>
+					<option>	Ph.D.(International Studies)</option>
+					<option>	Ph.D.(Islamic Studies)</option>
+					<option>	Ph.D.(Law)</option>
+					<option>	Ph.D.(Management)</option>
+					<option>	Ph.D.(Mass Communication)</option>
+					<option>	Ph.D.(Mathematics)</option>
+					<option>	Ph.D.(Mechanical Engineer)</option>
+					<option>	Ph.D.(Nanotechnology)</option>
+					<option>	Ph.D.(Peace & Conflict Studies)</option>
+					<option>	Ph.D.(Persian)</option>
+					<option>	Ph.D.(Physics)</option>
+					<option>	Ph.D.(Physiotherapy & Rehab. Sc)</option>
+					<option>	Ph.D.(Political Science)</option>
+					<option>	Ph.D.(Psychology)</option>
+					<option>	Ph.D.(Social Work)</option>
+					<option>	Ph.D.(Sociology)</option>
+					<option>	Ph.D.(Theoretical Physics)</option>
+					<option>	Ph.D.(Urdu)</option>
+					<option>	Ph.D.(West Asian Studies)</option>
+</optgroup>
+<option></option>
+<optgroup label="Masters Programmes">
+					<option>	M.A. in Convergent Journalism</option>
+					<option>	M.A. in Development Communication</option>
+					<option>	M.A. in Mass Communication</option>
+					<option>	M.A. in Visual Effect and Animation</option>
+					<option>	M.A.(Applied Psychology)</option>
+					<option>	M.A.(Arabic)</option>
+					<option>	M.A.(Conflict Analysis & Peace Building)</option>
+					<option>	M.A.(Early Childhood Development)</option>
+					<option>	M.A.(Economics)</option>
+					<option>	M.A.(Education)</option>
+					<option>	M.A.(Educational Planning & Administration)</option>
+					<option>	M.A.(English)</option>
+					<option>	M.A.(Hindi)</option>
+					<option>	M.A.(History)</option>
+					<option>	M.A.(Human Resource Management)</option>
+					<option>	M.A.(Human Rights & Duties Edu.)</option>
+					<option>	M.A.(Islamic Studies)</option>
+					<option>	M.A.(Media Governance)</option>
+					<option>	M.A.(Persian)</option>
+					<option>	M.A.(Political Science)</option>
+					<option>	M.A.(Public Administration)</option>
+					<option>	M.A.(Social Exclusion & Inclusive Policy)</option>
+					<option>	M.A.(Social Work)</option>
+					<option>	M.A.(Sociology)</option>
+					<option>	M.A.(Urdu)</option>
+					<option>	M.A./ M.Sc. (Geography)</option>
+					<option>	M.A./M.Sc. (Mathematics)</option>
+					<option>	M.A./M.Sc. Development Extension
+					<option>	M.Arch.</option>
+					<option>	M.Com.(Business Management)</option>
+					<option>	M.Ed.(Elementary Education)</option>
+					<option>	M.Ekistics</option>
+					<option>	M.F.A Applied Art</option>
+					<option>	M.F.A Art Education</option>
+					<option>	M.F.A Art History & Art Appreciation</option>
+					<option>	M.F.A Graphic Art</option>
+					<option>	M.F.A Painting</option>
+					<option>	M.F.A Sculpture</option>
+					<option>	M.Phil. in Interdisciplinary in Basic Sciences</option>
+					<option>	M.Phil.(Comparative Religions)</option>
+					<option>	M.Phil.(Development Studies)</option>
+					<option>	M.Phil.(Education)</option>
+					<option>	M.Phil.(English Lit.)</option>
+					<option>	M.Phil.(European Studies /Latin American Studies )</option>
+					<option>	M.Phil.(Hindi)</option>
+					<option>	M.Phil.(History)</option>
+					<option>	M.Phil.(International Studies)</option>
+					<option>	M.Phil.(Urdu)</option>
+					<option>	M.Phil.(West Asian Studies)</option>
+					<option>	M.Sc. Mathematics with Computer Science
+					<option>	M.Sc.(Biochemistry)</option>(S.F.)</option>
+					<option>	M.Sc.(Bioinformatics)</option>(Self Finance)</option>
+					<option>	M.Sc.(Bioscience)</option>
+					<option>	M.Sc.(Biotechnology)</option>
+					<option>	M.Sc.(Chemistry)</option>
+					<option>	M.Sc.(Electronics)</option>
+					<option>	M.Sc.(Physics)</option>
+					<option>	M.Sc.Tech.(Industrial Mathematics With Computer Application)</option> (S.F.)</option>
+					<option>	M.Tech. (Control and Instrumentation Systems)</option>
+					<option>	M.Tech. in Earthquake Engineering</option>
+					<option>	M.Tech. in Mechanical Engineering)</option>
+					<option>	M.Tech.(Electrical Power System Management)</option>
+					<option>	M.Tech.(Environmental Science & Engineering)</option>
+					<option>	M.Tech.(Nanotechnology)</option> (SF)</option>
+					<option>	Master in Physiotherapy (MPT-Sports/Ortho)</option>
+					<option>	Master of Computer Application</option>
+					<option>	Master of Education (M. Ed.)</option>
+					<option>	Master of Education (Special Education)</option>
+					<option>	Master of Laws (LL. M.)</option>
+					<option>	MBA (Executive)</option>
+					<option>	MBA (Full Time)Programme</option>
+					<option>	MIB</option>
+</optgroup>
+<option></option>
+<optgroup label="Postgraduate Diploma Programmes">
+
+					<option>PG Diploma in Acting
+					<option>	PG Diploma in Broadcast Technology (Self Finance)</option>
+					<option>	PG Diploma in Computer Applications</option>
+					<option>	PG Diploma in Digital Cartography</option>
+					<option>	PG Diploma in Educational Management(Self Finance)</option>
+					<option>	PG Diploma in Iranology (Part-time)</option>
+					<option>	PG Diploma in Journalism (Self Finance)</option>
+					<option>	PG Diploma in Management of NGOs.</option>
+					<option>	PG Diploma in Remote Sensing & GIS Application</option>
+					<option>	PG Diploma in Still Photography & Visual Communication(Self Finance)</option>
+					<option>	PG Diploma in T.V Journalism (Hindi Medium)</option> (Self-Financing)</option>
+					<option>	PG Diploma in Urdu Mass Media</option>
+</optgroup>
+<option></option>
+<optgroup label="Undergraduate Programmes">
+					<option>B. Arch. / B.Arch. (Self Financing)</option>
+					<option>	B.A. (Hons.)Turkish Language & Literature</option>
+					<option>	B.A. LL.B(Hons.)</option>
+					<option>	B.A.(G)</option>
+					<option>	B.A.(H)Hotel Management, Travel and Tourism</option>
+					<option>	B.A.(Hons.) Islamic Studies</option>
+					<option>	B.A.(Hons.) Mass Media Hindi</option>
+					<option>	B.A.(Hons.) Urdu</option>
+					<option>	B.A.(Hons.)(Arabic)</option>
+					<option>	B.A.(Hons.)(Economics)</option>
+					<option>	B.A.(Hons.)(English)</option>
+					<option>	B.A.(Hons.)(Hindi)</option>
+					<option>	B.A.(Hons.)(History)</option>
+					<option>	B.A.(Hons.)(Maths)</option>
+					<option>	B.A.(Hons.)(Persian)</option>
+					<option>	B.A.(Hons.)(Political Science)</option>
+					<option>	B.A.(Hons.)(Psychology)</option>
+					<option>	B.A.(Hons.)(Social Work)</option>
+					<option>	B.A.(Hons.)(Sociology)</option>
+					<option>	B.Com (Hons)</option>
+					<option>	B.E.(Civil Engineering)</option>
+					<option>	B.E.(Computer Engineering)</option>(Self Finance)</option>
+					<option>	B.E.(Electrical Engineering)</option>( Self Finance)</option>
+					<option>	B.E.(Electronics & Comm.)</option>(Self Finance)</option>
+					<option>	B.E.(Mechanical Engineering)</option>( Self Finance)</option>
+					<option>	B.Ed. (Nursery Education)</option>
+					<option>	B.Ed. (Special Education)</option>
+					<option>	B.F.A Applied Art</option>
+					<option>	B.F.A Art Education</option>
+					<option>	B.F.A Painting</option>
+					<option>	B.F.A Sculpture</option>
+					<option>	B.Lib and Information Science</option>
+					<option>	B.Sc. (Hons.) Chemistry</option>
+					<option>	B.Sc. Bioscience</option>
+					<option>	B.Sc. Biotechnology</option>
+					<option>	B.Sc. with Instrumentation (Vocational)</option>
+					<option>	B.Sc.(Hons.)(Maths)</option>
+					<option>	B.Sc.(Hons.)(Physics)</option>
+					<option>	B.Tech. (Mechanical Engineering)</option>
+					<option>	B.Tech.(Civil Engineering)</option>
+					<option>	B.Tech.(Computer Engineering)</option>
+					<option>	B.Tech.(Electrical Engineering)</option>
+					<option>	B.Tech.(Electronics & Comm.Engg)</option>
+					<option>	BA/B.Sc.(Hons.) (Geography)</option>
+					<option>	Bachelor of Arts with Computer Applications</option>
+					<option>	Bachelor of Business Studies</option>
+					<option>	Bachelor of Dental Surgery</option>
+					<option>	Bachelor of Physiotherapy</option>
+</optgroup>
+<option></option>
+<optgroup label="Advanced Diploma Programmes">
+					<option>Advance Diploma in Mod. Arabic Language & Translation</option>
+					<option>	Advance Diploma in Modern Persian</option>
+					<option>	Advance Diploma in Turkemenian</option>
+					<option>	Advance Diploma in Turkish(Parttime)</option>
+					<option>	Advanced Diploma in Counseling Psychology</option>
+					<option>	Advanced Diploma in French</option>
+					<option>	Advanced Diploma in Italian</option>
+					<option>	Advanced Diploma in Pashto</option>
+					<option>	Advanced Diploma in Portuguese</option>
+					<option>	Advanced Diploma in Russian</option>
+					<option>	Advanced Diploma in Spanish</option>
+</optgroup>
+<option></option>
+<optgroup label="Diploma Programmes">
+					<option>	Diploma Engineering</option>
+					<option>	Diploma Engineering (Evening)</option>
+					<option>	Diploma in ETE</option>
+					<option>	Diploma in French</option>
+					<option>	Diploma in Italian</option>
+					<option>	Diploma in Kazhaki</option>
+					<option>	Diploma in Modern Arabic</option>
+					<option>	Diploma in Modern Persian</option>
+					<option>	Diploma in Pashto Language</option>
+					<option>	Diploma in Portuguese</option>
+					<option>	Diploma in Russianv</option>
+					<option>	Diploma in Sculpture</option>
+					<option>	Diploma in Spanish</option>
+					<option>	Diploma in Tourism and Travel Management</option>
+					<option>	Diploma in Translation Proficiency</option>
+					<option>	Diploma in Turkemenian</option>
+					<option>	Diploma in Turkish</option>
+					<option>	Diploma in Uzbek</option>
+</optgroup>
+<option></option>
+<optgroup label="Certificate Programmes">
+
+					<option>	Certificate Course (Photography)</option>( Parttime Self Finance)</option>
+					<option>	Certificate Course in Calligraphy (Parttime Self Finance)</option>
+					<option>	Certificate Course in Chinese Language (Intensive)</option>
+					<option>	Certificate Course in Commercial Art ( Parttime Self Finance)</option>
+					<option>	Certificate in Kazhaki</option>
+					<option>	Certificate in Modern Arabic Language</option>
+					<option>	Certificate in Modern Persian</option>
+					<option>	Certificate in Painting</option>
+					<option>	Certificate in Pashto Language</option>
+					<option>	Certificate in Sculpture</option>
+					<option>	Certificate in Tourism and Travel Management</option>
+					<option>	Certificate in Translation Proficiency</option>
+					<option>	Certificate in Turkemenian</option>
+					<option>	Certificate in Turkish</option>
+					<option>	Certificate in Urdu Language</option>
+					<option>	Certificate in Uzbek</option>
+					<option>	Certificate of Proficiency in French</option>
+					<option>	Certificate of Proficiency in Italian</option>
+					<option>	Certificate of Proficiency in Portuguese</option>
+					<option>	Certificate of Proficiency in Russian</option>
+					<option>	Certificate of Proficiency in Spanish</option>
+</optgroup>
+<option></option>
+<optgroup label="School Programme">
+					<option>	Jamia Girls Sr. Sec. School, Urdu Medium : XI Arts</option>
+					<option>	Jamia Girls Sr. Sec. School, Urdu Medium : XI Science</option>
+					<option>	Jamia Sr. Sec. School Morning Shift : XI Arts</option>
+					<option>	Jamia Sr. Sec. School Morning Shift : XI Commerce</option>
+					<option>	Jamia Sr. Sec. School Morning Shift : XI Science</option>
+					<option>	Syed Abid Husain Sr. Sec. School : XI Commerce</option>
+					<option>	Syed Abid Husain Sr. Sec. School : XI Science</option>
+</optgroup>	
+								
+
+        					</select>
+        				</div>
+      				</div></fieldset>
+
+				<fieldset class="flborder">
+   					 <legend class="leborder">Personal Information</legend>	
+						 <div class="form-group">
+       							   <label class="control-label col-sm-4" for="studentID">Email:</label>
+       							   <div class="col-sm-4">          
+							   <input type="text" class="form-control" id="studentID" name="stuemail" placeholder="example@example.com" autofocus>
+       							   </div>
+       						 </div>
+						 <div class="form-group">
+       							   <label class="control-label col-sm-4" for="studentID">Date-Of-Birth:</label>
+       							   <div class="col-sm-4">          
+							   <input type="date" name="studob" autofocus required>
+       							   </div>
+       						 </div>
+
+						<div class="form-group">
+       							   <label class="control-label col-sm-4" for="studentID">Contact:</label>
+       							   <div class="col-sm-4">          
+							   <input type="text" name="stucon" placeholder="Student's contact"class="form-control" id="studentID" autofocus required>
+       							   </div>
+       						 </div>
+						<div class="form-group">
+       							   <label class="control-label col-sm-4" for="studentID">Nationality:</label>
+       							   <div class="col-sm-4">          
+							   <input type="text" name="stunation" placeholder="As on passport" class="form-control" id="studentID" autofocus required>
+       							   </div>
+       						 </div>
+							
+							
+							
+	
+						<div class="form-group">
+       								<label class="col-sm-4 control-label" for="studentID">Blood Group:</label>
+        							<div class="col-sm-4">
+        							<select class="form-control" name="stublood" autofocus required>
+        									<option></option>
+										<option>A-</option>
+										<option>A+</option>
+										<option>AB-</option>
+										<option>AB+</option>
+										<option>B-</option>
+										<option>B+</option>
+										<option>O-</option>
+										<option>O+</option>
+								</select>
+							</div>
+						</div>
+						
+						<div class="form-group">
+       							   <label class="control-label col-sm-4" for="studentID">Father's Name:</label>
+       							   <div class="col-sm-4">          
+							   <input type="text" name="stufanm" class="form-control" id="studentID" autofocus required>
+       							   </div>
+       						 </div>
+						 <div class="form-group">
+       							   <label class="control-label col-sm-4" for="studentID">Mother's Name:</label>
+       							   <div class="col-sm-4">          
+							   <input type="text" name="stumanm" class="form-control" id="studentID" autofocus required>
+       							   </div>
+       						 </div>
+						 <div class="form-group">
+       							   <label class="control-label col-sm-4" for="studentID">Home Town:</label>
+       							   <div class="col-sm-4">          
+							   <input type="text" name="stucity" class="form-control" id="studentID" placeholder="As on permanent address" autofocus required>
+       							   </div>
+       						 </div>
+						<div class="form-group">
+       							   <label class="control-label col-sm-4" for="studentID">State:</label>
+       							   <div class="col-sm-4">          
+							   <input type="text" name="stustate" class="form-control" id="studentID" autofocus required placeholder="As on permanent address">
+       							   </div>
+       						 </div></fieldset>
+						
+					<fieldset class="flborder">
+   					 <legend class="leborder">Hostel Information</legend>	
+						<div class="form-group">
+       								<label class="col-sm-4 control-label" for="studentID">Hostel:</label>
+        							<div class="col-sm-4">
+        							<select class="form-control" name="stuhost" required>
+        									<option></option>
+										<option>AAA</option>
+										<option>BAK</option>
+										<option>BMA</option>
+										<option>GP</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-group">
+       							   <label class="control-label col-sm-4" for="studentID">LocalGaurdian's Name:</label>
+       							   <div class="col-sm-4">          
+							   <input type="text" name="log1na" class="form-control" id="studentID" placeholder="First L.G's name" autofocus required>
+       							   </div>
+       						 </div>
+						<div class="form-group">
+       							   <label class="control-label col-sm-4" for="studentID">Gaurdian_1Contact:</label>
+       							   <div class="col-sm-4">          
+							   <input type="text" name="log1con" placeholder="First L.G's contact"class="form-control" id="studentID" autofocus required>
+       							   </div>
+       						 </div>
+						<div class="form-group">
+       							   <label class="control-label col-sm-4" for="studentID">Relation:</label>
+       							   <div class="col-sm-4">          
+							   <input type="text" name="log1rel"  class="form-control" id="studentID" autofocus required placeholder="First L.G's relation with student">
+       							   </div>
+       						 </div>
+
+						<div class="form-group">
+       							   <label class="control-label col-sm-4" for="studentID">LocalGaurdian's Name:</label>
+       							   <div class="col-sm-4">          
+							   <input type="text" name="log2na" class="form-control" id="studentID" placeholder="Second L.G's name" autofocus required>
+       							   </div>
+       						 </div>
+						<div class="form-group">
+       							   <label class="control-label col-sm-4" for="studentID">Gaurdian_2Contact:</label>
+       							   <div class="col-sm-4">          
+							   <input type="text" name="log2con" placeholder="Second L.G's contact"class="form-control" id="studentID" autofocus required>
+       							   </div>
+       						 </div>
+						<div class="form-group">
+       							   <label class="control-label col-sm-4" for="studentID">Relation:</label>
+       							   <div class="col-sm-4">          
+							   <input type="text" name="log2rel"  class="form-control" id="studentID" autofocus required placeholder="Second L.G's relation with student">
+       							   </div>
+       						 </div>
+						</fieldset>
+        					
+						<fieldset class="flborder">
+   					 	<br>	
+						<div class="form-group">        
+        						<div class="col-sm-offset-4 col-sm-5">
+        					  	<button type="submit" class="btn btn-primary">Submit</button>
+							<button class="btn btn-danger" type="reset">Reset</button>
+       							</div>
+        					</div>
+						</fieldset>
+						
+      					</form>
+				</div>
+	</body>
+</html>	
+			

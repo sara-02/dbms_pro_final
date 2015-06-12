@@ -1,0 +1,83 @@
+<?php session_start();?>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta content="width=device-width",initial-scale=1">
+		<title>Girls Hostel System</title>
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="fontawesome/assets/css/font-awesome.min.css>
+		<script type="text/javascript" src="js/jquery-2.1.0.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<style>
+		body{
+			background-color:lavender;
+		}
+		.btn-toolbar{
+			border: 3px solid darkblue;
+			margin:15px;
+			padding:5px;
+			border-radius:4px;
+			box-shadow: 0 0 30px ;
+		}
+		.btn-danger{
+			font-color:black;
+		}
+		</style>
+	
+	</head>
+	
+	<body margin="25px">
+			<nav role="navigation" class="navbar navbar-default">
+				<div class="navbar-header">
+					<button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+						<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					</button>
+				<a href="home.phtml" class ="navbar-brand">Home</a>			
+				</div>
+				<div id=navbarCollapse class="collapse navbar-collapse">
+					<ul class ="nav navbar-nav">
+					<li class="active"><a href="http://jmi.ac.in/upload/hostel/hgr_manual_2014.pdf">About Us</a></li>
+					<li><a href="http://jmi.ac.in/studyatjamia/hostel/latest/2" target="blank">Notifications</a></li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right"><li ><a href="contact.html" ><i class="glyphicon glyphicon-phone-alt"></i>Contact Us</a></li></ul>
+				</div>
+			</nav>
+			<div>
+		</div>
+			<div>
+				<div class="btn-toolbar">
+					<p align="center"><u>Students Section</u>
+						<br><br>
+						<button type="button" class="btn btn-default"><a href="addstu.html">Add Student</a></button>
+						<button type="button" class="btn btn-danger"><a href="sturem.html">Remove Student</a></button>
+						<button type="button" class="btn btn-default"><a href="entstu.html">View/Edit Student</a></button>
+					</P>
+					<br>
+				</div>
+				<div class="btn-toolbar">
+					<p align="center"><u>Employee Section</u>
+						<br><br>
+						<button type="button" class="btn btn-default"><a href="addemp.html">Add Employee</a></button>
+						<button type="button" class="btn btn-danger"><a href="rememp.html">Remove Employee</a></button>
+						<button type="button" class="btn btn-default"><a href="entemp.html">View/Edit Employee</a></button>
+					</p>
+					<br>
+				</div>
+				<div class="btn-toolbar">
+					<p align="center"><u>Hostel Section</u>
+						<br><br>
+						<button type="button" class="btn btn-default"><a href="hostelview.html">View Hostels</button>
+						<button type="button" class="btn btn-default"><a href="comp.html">View/Edit Complaints</a></button>
+						<button type="button" class="btn btn-default">View vacancy</button>
+					</p>
+					<br>
+				</div>
+				
+			</div>
+	</body>
+</html>		
+		

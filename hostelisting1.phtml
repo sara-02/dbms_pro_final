@@ -1,0 +1,207 @@
+<?php
+	session_start();
+?>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta content="width=device-width",initial-scale=1">
+		<title>Girls Hostel System</title>
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="fontawesome/assets/css/font-awesome.min.css>
+		<script type="text/javascript" src="js/jquery-2.1.0.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<style>
+		body{
+			background-color:#CCFFFF;
+		}
+		</style>
+	
+	</head>
+	<style>
+		h1{
+			font-family: "Times New Roman", Times, serif
+			font-size:100%
+		}
+	</style>
+	<body margin="25px" background="/home/sarah/Pictures/blue-backgrounds.png">
+			<nav role="navigation" class="navbar navbar-default">
+				<div class="navbar-header">
+					<button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+						<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					</button>
+				<a href="home.phtml" class ="navbar-brand">Home</a>			
+				</div>
+				
+				<div id=navbarCollapse class="collapse navbar-collapse">
+					<ul class ="nav navbar-nav">
+					<li class="active"><a href="http://jmi.ac.in/upload/hostel/hgr_manual_2014.pdf">About Us</a></li>
+					<li><a href="http://jmi.ac.in/studyatjamia/hostel/latest/2" target="blank">Notifications</a></li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+					<li><img src="/home/sarah/dbms_pro_final/logo.jpg"></li>
+					<li ><a href="contact.html" ><i class="glyphicon glyphicon-phone-alt"></i>Contact Us</a></li></ul>
+				</div>
+			</nav>
+<?php
+	
+	$dbdata='dbms_pro';
+	$dbhost='localhost';
+	$dbuser='root';
+	$dbpass='dbms';
+	
+	$link=mysql_connect($dbhost,$dbuser,$dbpass);
+	if(!$link)
+	{
+		 die('Could not connect:' . mysql_error());
+	}
+	$conc = mysql_select_db($dbdata,$link);
+	if(!$conc )
+	{
+ 		 die('Could not connect to db:' . mysql_error());
+	}
+	$v1=(int)$_POST['che1'];
+	$v2=(int)$_POST['che2'];
+	$v3=(int)$_POST['che3'];
+	$v4=(int)$_POST['che4'];
+	$sum=0;
+	/*echo $v1;
+	echo $v2;
+	echo $v3;
+	echo $v4;*/
+	
+	if($v1==1)
+	{
+		//echo "hello1";
+		$sql= "SELECT * FROM student WHERE stuhostel='AAA'";
+		$res=mysql_query($sql);
+		if(!res)
+		{
+		die('sql error'.mysql_error());
+		}
+		$sn=1;
+		?>
+		<div class="panel panel-primary">
+		<div class="panel-heading">
+      			<h2 class="panel-title"><h1><b><u>ARUNA ASIF ALI: LIST</u></b></h1></h2>
+		</div>
+			<table class="table">
+			<th>SerialNo.</th><th>StudentID</th><th>Name</th>
+			
+		<?php
+		while($row = mysql_fetch_array($res))
+		{  
+		
+		echo "<tr><td>".$sn."</td><td>" . $row['stuid'] . "</td><td>" . $row['stuna'] . "</td></tr>";
+		$sn++;
+		}
+		echo "</br>";
+	echo "<tr><td>".TOTAL."</td><td>" . "==". "</td><td>" . --$sn . "</td></tr>";
+	$sum+=$sn;
+		?>
+		</table>
+		</div>
+		<?php
+	}
+	if($v2==2)
+	{
+		//echo "hello2";
+		$sql= "SELECT * FROM student WHERE stuhostel='BAK'"; //You don't need a ; like you do in SQL
+		$res=mysql_query($sql);
+		if(!res)
+		{
+		die('sql error'.mysql_error());
+		}
+		$sn=1;
+		?>
+		<div class="panel panel-primary">
+		<div class="panel-heading">
+      			<h2 class="panel-title"><h1><b><u>BEGUM ANIS KIDWAI HOSTEL: LIST</u></b></h1></h2>
+		</div>
+			<table class="table">
+			<th>SerialNo.</th><th>StudentID</th><th>Name</th>
+		<?php
+		while($row = mysql_fetch_array($res))
+		{  
+		
+		echo "<tr><td>".$sn."</td><td>" . $row['stuid'] . "</td><td>" . $row['stuna'] . "</td></tr>";
+		$sn++;
+		}
+		echo "</br>";
+	echo "<tr><td>".TOTAL."</td><td>" . "==". "</td><td>" . --$sn . "</td></tr>";
+	$sum+=$sn;
+		?>
+		</table>
+		</div>
+		<?php
+	}
+	if($v3==3)
+	{
+		//echo "hello3";
+		$sql="SELECT * FROM student WHERE student.stuhostel='BMA'"; //You don't need a ; like you do in SQL
+		$res=mysql_query($sql);
+		if(!res)
+		{
+		die('sql error'.mysql_error());
+		}
+		$sn=1;
+		?>
+		<div class="panel panel-primary">
+		<div class="panel-heading">
+      			<h2 class="panel-title"><h1><b><u>BI AMMA GIRLS HOSTEL: LIST</u></b></h1></h2>
+		</div>
+			<table class="table">
+			<th>SerialNo.</th><th>StudentID</th><th>Name</th><th>Courses</th>
+		<?php
+		while($row = mysql_fetch_array($res))
+		{  
+			echo "<tr><td>".$sn."</td><td>" . $row['stuid'] . "</td><td>" . $row['stuna'] . "</td></tr>";
+			$sn++;
+		}
+		echo "</br>";
+	echo "<tr><td>".TOTAL."</td><td>" . "==". "</td><td>" . --$sn . "</td></tr>";
+	$sum+=$sn;
+		?>
+		</table>
+		</div>
+		<?php
+	}
+	if($v4==4)
+	{ //echo "hello4";
+		$sql= "SELECT * FROM student WHERE stuhostel='GP'"; //You don't need a ; like you do in SQL
+		$res=mysql_query($sql);
+		if(!res)
+		{
+		die('sql error'.mysql_error());
+		}
+		$sn=1;
+		?>
+		<div class="panel panel-primary">
+		<div class="panel-heading">
+      			<h2 class="panel-title"><h1><b><u>GERDA PHILIPSBORNE GIRLS HOSTEL: LIST</u></b></h1></h2>
+		</div>
+			<table class="table">
+			<th>SerialNo.</th><th>StudentID</th><th>Name</th>
+			<?php
+		while($row = mysql_fetch_array($res))
+		{  
+		
+		echo "<tr><td>".$sn."</td><td>" . $row['stuid'] . "</td><td>" . $row['stuna'] . "</td></tr>";
+		$sn++;
+		}
+		echo "</br>";
+	echo "<tr><td>".TOTAL."</td><td>" . "==". "</td><td>" . --$sn . "</td></tr>";
+	$sum+=$sn;
+		?>
+		</table>
+		</div>
+		<?php
+	}
+?>
+<h2 align="center" >GRAND TOTAL:=:<?php echo $sum?></h2>
+</body>
+</html>
+	
